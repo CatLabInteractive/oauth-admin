@@ -1,0 +1,13 @@
+{
+    "name": "catlabinteractive/oauth-admin",
+    "description": "Admin panel for oauth2-server-laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thijs Van der Schaeghe",
+            "email": "info@catlab.be"
+        }
+    ],
+    "require": {}
+}
