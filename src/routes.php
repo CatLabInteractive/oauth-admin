@@ -3,7 +3,8 @@
 Route::group(
     [
         'prefix' => 'oauth-admin',
-        'namespace' => 'CatLab\\OAuthAdmin\\Controllers'
+        'namespace' => 'CatLab\\OAuthAdmin\\Controllers',
+        'middleware' => [ 'admin' ]
     ],
     function() {
 
