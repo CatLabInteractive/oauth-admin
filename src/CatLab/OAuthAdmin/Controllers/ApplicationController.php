@@ -42,6 +42,23 @@ class ApplicationController extends Controller
     }
 
     /**
+     * @param string $id
+     * @return Response
+     */
+    public function processEdit($id)
+    {
+        // Doesn't do anything yet.
+        $client = OAuthClient::findOrFail($id);
+
+        return redirect(
+            route(
+                'oauthadmin-applications-edit',
+                [ 'id' => $client->id ]
+            )
+        );
+    }
+
+    /**
      * @return \Illuminate\Http\Response
      */
     public function createApplication()
@@ -65,8 +82,8 @@ class ApplicationController extends Controller
         $client->save();
 
         return redirect(
-            action(
-                '\CatLab\OAuthAdmin\Controllers\ApplicationController@edit',
+            route(
+                'oauthadmin-applications-edit',
                 [ 'id' => $client->id ]
             )
         );

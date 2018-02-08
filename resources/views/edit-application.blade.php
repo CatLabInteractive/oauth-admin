@@ -44,8 +44,8 @@
                     <tr>
                         <td>{{$endpoint->redirect_uri}}</td>
                         <td>{{$endpoint->created_at}}</td>
-                        <td><a href="{{ action(
-                            '\CatLab\OAuthAdmin\Controllers\ApplicationController@removeEndpoint',
+                        <td><a href="{{ route(
+                            'oauthadmin-applications-remove',
                             [
                                 'id' => $client->id,
                                 'endpointId' => $endpoint->id
@@ -56,7 +56,7 @@
             </table>
 
             <!-- Register new endpoint form -->
-            {{ Form::open(array('action' => [ '\CatLab\OAuthAdmin\Controllers\ApplicationController@createEndpoint', $client->id ] )) }}
+            {{ Form::open(array('route' => [ 'oauthadmin-applications-create-endpoint', $client->id ] )) }}
             {{ Form::text('redirect_uri') }}
             {{ Form::submit(trans('oauth-admin::applications.createEndpoint')) }}
             {{ Form::close() }}

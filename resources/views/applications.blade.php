@@ -21,7 +21,7 @@
                 @foreach ($clients as $client)
                     <tr>
                         <td>
-                            <a href="{{action('\CatLab\OAuthAdmin\Controllers\ApplicationController@edit', [ 'id' => $client->id ])}}">
+                            <a href="{{route('oauthadmin-applications-edit', [ 'id' => $client->id ])}}">
                                 {{ $client->id }}
                             </a>
                         </td>
@@ -32,7 +32,7 @@
             </table>
 
             <p>
-                <a href="{{action('\CatLab\OAuthAdmin\Controllers\ApplicationController@createApplication')}}">Create new application</a>
+                <a href="{{route('oauthadmin-applications-create')}}">Create new application</a>
             </p>
         </div>
     </div>

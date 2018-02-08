@@ -28,8 +28,9 @@
 </div>
 
 <!-- JavaScripts -->
-{{ Html::script('vendor/jquery/dist/jquery.min.js') }}
-{{ Html::script('vendor/bootstrap/dist/js/bootstrap.min.js') }}
-{{ Html::script('js/main.js') }}
+<script type="text/javascript" src="{{ asset('vendor/jquery/dist/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
 </body>
 </html>

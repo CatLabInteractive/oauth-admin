@@ -13,7 +13,7 @@
         <div class="panel-body">
 
             <!-- Register new endpoint form -->
-            {{ Form::open(array('method' => 'post', 'action' => [ '\CatLab\OAuthAdmin\Controllers\ApplicationController@createApplication' ] )) }}
+            {{ Form::open(array('method' => 'post', 'route' => [ 'oauthadmin-applications-create' ] )) }}
             {{ Form::label(trans('oauth-admin::applications.name')) }}
             {{ Form::text('name') }}
             {{ Form::submit(trans('oauth-admin::applications.createApplication')) }}
