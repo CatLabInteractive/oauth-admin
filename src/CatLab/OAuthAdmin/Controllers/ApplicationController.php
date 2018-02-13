@@ -109,8 +109,8 @@ class ApplicationController extends Controller
         }
 
         return redirect(
-            action(
-                '\CatLab\OAuthAdmin\Controllers\ApplicationController@edit',
+            route(
+                'oauthadmin-applications-edit',
                 [ 'id' => $client->id ]
             )
         );
@@ -139,8 +139,8 @@ class ApplicationController extends Controller
         }
 
         return redirect(
-            action(
-                '\CatLab\OAuthAdmin\Controllers\ApplicationController@edit',
+            route(
+                'oauthadmin-applications-edit',
                 [ 'id' => $client->id ]
             )
         );
